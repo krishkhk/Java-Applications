@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<bean class="com.spring.Student" id="stu">
+<property name="stdname" value="100"> </property>
+<property name="sname" value="hari"></property>
+<property name="sadd" value="Hyderabad"></property>
+
+
+</bean>
+
+<bean class="com.spring.Student" id="stu1">
+<property name="stdname" value="2135"> </property>
+<property name="sname" value="krishna"></property>
+<property name="sadd" value="Hyderabad"></property>
+
+</bean>
+<bean class="com.spring.Institute" id="id">
+
+<property name="name" value="Ojas"></property>
+<property name="courses">
+
+<list><value>Angular</value>
+<value>Java</value>
+<value>Sql</value>
+<value>JDBC</value>
+
+</list>
+</property>
+
+<property name="faculties">
+<set>
+
+<value>hari</value>
+<value>krishna</value>
+</set>
+</property>
+<property name="students">
+<list>
+<ref bean="stu"/>
+<ref bean="stu1"/>
+</list>
+
+</property>
+
+
+</bean>
+
+</beans>
